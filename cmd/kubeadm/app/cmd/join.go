@@ -343,7 +343,7 @@ func newJoinData(cmd *cobra.Command, args []string, opt *joinOptions, out io.Wri
 	// if not joining a control plane, unset the ControlPlane object
 	if !opt.controlPlane {
 		if opt.externalcfg.ControlPlane != nil {
-			klog.Warningf("[preflight] WARNING: JoinControlPane.controlPlane settings will be ignored when %s flag is not set.", options.ControlPlane)
+			klog.Warningf("[preflight] WARNING: JoinControlPlane.controlPlane settings will be ignored when %s flag is not set.", options.ControlPlane)
 		}
 		opt.externalcfg.ControlPlane = nil
 	}
